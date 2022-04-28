@@ -10,12 +10,3 @@ build:
 
 lint:
 		npx eslint .
-
-test:
-		npm run test
-	
-watch:
-		test-watch
-
-cover:
-		test-cover
