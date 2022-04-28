@@ -1,6 +1,16 @@
-import { string } from 'yup';
+import { string, setLocale } from 'yup';
 
 export default ({ url, urls }) => {
+  setLocale({
+    mixed: {
+      default: () => ({ key: 'default' }),
+      notOneOf: () => ({ key: 'exists' }),
+    },
+    string: {
+      url: () => ({ key: 'wrong_format' }),
+    },
+  });
+
   const urlString = string().url().notOneOf(urls);
 
   return urlString.validate(url); // это промис!

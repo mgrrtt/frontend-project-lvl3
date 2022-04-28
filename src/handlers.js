@@ -1,4 +1,5 @@
 /* eslint-disable no-param-reassign */
+import i18next from 'i18next';
 import validation from './validation';
 
 export const handleInput = (event, watchedState) => {
@@ -17,10 +18,12 @@ export const handleSubmit = (event, watchedState, state) => {
       watchedState.url = '';
     })
     .catch((e) => {
+      const error = i18next.t(e.errors[0].key);
+
       watchedState.isUrlValid = false;
 
-      if (!state.errors.includes(e.message)) {
-        watchedState.errors.push(e.message);
+      if (!state.errors.includes(error)) {
+        watchedState.errors.push(error);
       }
     });
 };

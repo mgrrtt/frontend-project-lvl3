@@ -1,9 +1,12 @@
 import onChange from 'on-change';
+import initTexts from './initTexts';
 
 import { handleInput, handleSubmit } from './handlers';
 import render from './render';
 
 export default () => {
+  initTexts();
+
   const state = {
     url: '',
     isUrlValid: true,
