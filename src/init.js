@@ -9,8 +9,8 @@ export default () => {
         translation: {
           success: 'RSS успешно загружен',
           default: 'Некорректный воод',
-          wrong_format: 'Ссылка должна быть валидным URL',
           exists: 'RSS уже существует',
+          wrong_format: 'Ссылка должна быть валидным URL',
         },
       },
     },

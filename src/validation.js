@@ -1,6 +1,7 @@
 import { string, setLocale } from 'yup';
 
 export default ({ url, urls }) => {
+  // кастомные тексты ошибок
   setLocale({
     mixed: {
       default: () => ({ key: 'default' }),
